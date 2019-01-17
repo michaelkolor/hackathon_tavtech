@@ -11,7 +11,7 @@ def cleanFile():
 		"UCR_PART", "REPORTING_AREA", "DISTRICT", "OFFENSE_CODE_GROUP", "DAY_OF_WEEK", 
 		"SHOOTING"], axis = 1)
 
-	file = file[0:200]
+	file = file[0:2500]
 
 	return (file)
 
@@ -23,8 +23,8 @@ def main():
 	Islat = list(Israel['Latitude'])
 	Islon = list(Israel['Longitude'])
 
-	Islat = [x for x in Islat if str(x) != 'nan' and x < 32 and x > 30]
-	Islon = [x for x in Islon if str(x) != 'nan' and x > 34 and x < 35]
+	# Islat = [x for x in Islat if str(x) != 'nan' and x < 35 and x > 28]
+	# Islon = [x for x in Islon if str(x) != 'nan' and x > 30 and x < 50]
 
 	Bolat = cleanedFile['Lat']
 	Bolon = cleanedFile['Long']
